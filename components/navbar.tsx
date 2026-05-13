@@ -42,10 +42,12 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             
-            <img
-              src="/webpage%20logo/logo.png"
-              alt="Proplanex"
-              className="h-10 w-auto"
+            <Image
+                src="/logo.png"
+                alt="Proplanex"
+                width={45}
+                height={45}
+/>
             />
           
             <span className="text-xl font-bold text-foreground">
