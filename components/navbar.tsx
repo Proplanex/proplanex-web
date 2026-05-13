@@ -43,7 +43,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"  
              
-     <img src="/logo.png" alt="Proplanex Logo" className="h-8 w-auto object-contain" />
+     ="h-8 w-auto object-contain" />
 
           </div
             <span className="text-xl font-bold text-foreground">Proplanex</span>
@@ -98,8 +98,9 @@ export function Navbar() {
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition-colors py-2 text-sm font-medium"
-                >
+                ><img src="/logo.png" alt="Proplanex Logo" className="h-8 w-auto" /> 
                   {link.label}
+                  <img src="/logo.png" alt="Proplanex Logo" className="h-8 w-auto" />
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
