@@ -8,23 +8,15 @@ import { Button } from "@/components/ui/button"
 const plans = [
   {
     name: "Basic",
-    price: "$99",
-    period: "/month",
-    annualPrice: "$79",
+    price: "50K\BDT",
     description: "Perfect for small factories getting started with digital transformation",
     features: [
-      { name: "Up to 5 users", included: true },
+      { name: "Up to 2/3 Files", included: true },
       { name: "Production planning", included: true },
       { name: "Basic inventory tracking", included: true },
       { name: "Order management", included: true },
       { name: "Standard reports", included: true },
       { name: "Email support", included: true },
-      { name: "AI insights", included: false },
-      { name: "Multi-factory support", included: false },
-      { name: "Custom integrations", included: false },
-      { name: "Dedicated account manager", included: false },
-    ],
-    cta: "Start Free Trial",
     popular: false,
   },
   {
