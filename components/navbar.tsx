@@ -44,7 +44,7 @@ export function Navbar() {
             
             <img
               src="/webpage%20logo/logo.png.png"
-              alt="Proplanex Logo"
+              alt="Proplanex"
               className="h-10 w-auto"
             />
           
