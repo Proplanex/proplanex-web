@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
@@ -22,7 +23,9 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
+
     window.addEventListener("scroll", handleScroll)
+
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -32,28 +35,30 @@ export function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/80 backdrop-blur-xl border-b border-border" 
+        isScrolled
+          ? "bg-background/80 backdrop-blur-xl border-b border-border"
           : "bg-transparent"
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            
+
             <Image
-                src="/logo.png"
-                alt="Proplanex"
-                width={45}
-                height={45}
-/>
+              src="/logo.png"
+              alt="Proplanex Logo"
+              width={45}
+              height={45}
+              priority
+              className="object-contain"
             />
-          
-            <span className="text-xl font-bold text-foreground">
+
+            <span className="text-2xl font-bold text-foreground">
               Proplanex
             </span>
-          
+
           </Link>
 
           {/* Desktop Navigation */}
@@ -69,12 +74,13 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* Desktop Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" asChild>
               <Link href="/login">Login</Link>
             </Button>
-            <Button asChild className="bg-primary hover:bg-primary/90 glow">
+
+            <Button asChild className="bg-primary hover:bg-primary/90">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
@@ -86,6 +92,7 @@ export function Navbar() {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
         </div>
       </nav>
 
@@ -99,6 +106,7 @@ export function Navbar() {
             className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -109,14 +117,22 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
+
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
+
                 <Button variant="ghost" asChild className="w-full">
                   <Link href="/login">Login</Link>
                 </Button>
-                <Button asChild className="w-full bg-primary hover:bg-primary/90">
+
+                <Button
+                  asChild
+                  className="w-full bg-primary hover:bg-primary/90"
+                >
                   <Link href="/contact">Get Started</Link>
                 </Button>
+
               </div>
+
             </div>
           </motion.div>
         )}
