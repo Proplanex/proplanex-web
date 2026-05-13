@@ -41,11 +41,16 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">P</span>
-            </div>
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"  
+              <img 
+  src="/logo.png" 
+  alt="Proplanex Logo" 
+  className="h-8 w-auto" 
+/>
+
+          </div
             <span className="text-xl font-bold text-foreground">Proplanex</span>
-          </Link>
+        </Link
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
