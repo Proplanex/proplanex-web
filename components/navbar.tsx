@@ -43,7 +43,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             
             <img
-              src="/webpage%20logo/logo.png"
+              src="/webpage%20logo/logo.png.png"
               alt="Proplanex Logo"
               className="h-10 w-auto"
             />
